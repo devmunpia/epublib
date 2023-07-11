@@ -26,6 +26,7 @@ public class MediatypeService {
 	public static final MediaType JPG = new MediaType("image/jpeg", ".jpg", new String[] {".jpg", ".jpeg"});
 	public static final MediaType PNG = new MediaType("image/png", ".png");
 	public static final MediaType GIF = new MediaType("image/gif", ".gif");
+	public static final MediaType BMP = new MediaType("image/bmp", ".bmp");
 	
 	public static final MediaType SVG = new MediaType("image/svg+xml", ".svg");
 
@@ -46,7 +47,7 @@ public class MediatypeService {
 	public static final MediaType PLS = new MediaType("application/pls+xml", ".pls");
 	
 	public static MediaType[] mediatypes = new MediaType[] {
-		XHTML, EPUB, JPG, PNG, GIF, CSS, SVG, TTF, NCX, XPGT, OPENTYPE, WOFF, SMIL, PLS, JAVASCRIPT, MP3, MP4, OGG
+		XHTML, EPUB, JPG, PNG, GIF, BMP, CSS, SVG, TTF, NCX, XPGT, OPENTYPE, WOFF, SMIL, PLS, JAVASCRIPT, MP3, MP4, OGG
 	};
 	
 	public static Map<String, MediaType> mediaTypesByName = new HashMap<String, MediaType>();
@@ -57,7 +58,7 @@ public class MediatypeService {
 	}
 	
 	public static boolean isBitmapImage(MediaType mediaType) {
-		return mediaType == JPG || mediaType == PNG || mediaType == GIF;
+		return mediaType == JPG || mediaType == PNG || mediaType == GIF || mediaType == BMP;
 	}
 	
 	/**
